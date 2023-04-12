@@ -17,7 +17,6 @@ const toggleMenu = () => {
   } else {
     navegacion.classList.add('ocultar');
   } botoncerrar();
-
 };
 
 const botoncerrar = () => {
@@ -27,12 +26,14 @@ const botoncerrar = () => {
   navegacion.appendChild(btnCerrar);
   cerrarMenu(btnCerrar);
   overlay.remove;
-
+  boton.remove();
 }
 
 const cerrarMenu = (boton) => {
   boton.addEventListener('click', () => {
     navegacion.classList.add('ocultar');
     overlay.classList.add('ocultar-background');
+    boton.remove();
   })
 }
+
